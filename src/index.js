@@ -32,3 +32,6 @@ app.listen(port, () => {
 
 const Task = require('./models/task')
 const User = require('./models/user')
+app.use((req, res, next) => {
+    res.status(503).send('welcome!')
+})
